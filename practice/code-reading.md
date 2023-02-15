@@ -15,6 +15,8 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+  Inside the function a NEW variable x is declared and it loses its property outside the function as it is a function variable.
+  Line no 1 declared a GLOBAL variable which is console logged at line no 14. Hence the results of the code is -->1
 
 ## Question 2
 
@@ -34,6 +36,7 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+'undefined' as the variable y is a FUNCTION variable and is called outside the function, which will result in 'undefined'. In order to work the solution will be to console log the y var inside the function body and when the function is called the variable will be console.logged, OR to be declared as a GLOBAL variable outside the function's body and it would display 20 by keeping the rest as it is.
 
 ## Question 3
 
@@ -62,3 +65,5 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+  console.log(x)-> will return 9, the value of the GLOBAL variable
+  console.log(y)-> will return {x:10} at it increases the value of key 'x' by one. the function f1(x) and f2(x) have no outputs as they should be CONSOLE.LOGGED considering that returns a value
