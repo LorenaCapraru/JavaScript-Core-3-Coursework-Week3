@@ -6,3 +6,14 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+let total = 0;
+console.log("QTY\tITEM\t\t\tTOTAL");
+order.forEach((item) => {
+  if (item.itemName === "Sausage McMuffin")
+    console.log(item.quantity + "\t" + item.itemName + "\t" + item.unitPrice);
+  else
+    console.log(item.quantity + "\t" + item.itemName + "\t\t" + item.unitPrice);
+  total += item.unitPrice;
+});
+console.log("Total:" + "\t" + total);
