@@ -70,3 +70,22 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+// function displayName(hogwarts) {
+//   let listOfHogwardNames = [];
+//   for (let hogwart of hogwarts) {
+//     if (hogwart.house === "Gryffindor")
+//       listOfHogwardNames.push(hogwart.firstName + " " + hogwart.lastName);
+//   }
+//   console.log(listOfHogwardNames);
+// }
+
+function displayName(hogwarts) {
+  hogwarts.forEach((person) => {
+    if (person.house === "Gryffindor") {
+      let { firstName, lastName } = person;
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+displayName(hogwarts);
